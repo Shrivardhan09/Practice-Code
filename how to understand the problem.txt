@@ -1,0 +1,33 @@
+/**
+ * @description - Write a program to reverse a string
+ * Step 1 - Create a function 
+ * Step 2 - Check if it's not a valid string
+ * Step 2.1 - Return, Please enter a valid word or character
+ * Step 3 - Lowercase the following string -> AnKiT - ankit
+ * Step 4 - Iterate a loop & reverse the string
+ * Step 5 - Return the output
+ */
+
+/**
+ * @description - Write a program to reverse a string
+ * Step 1 - Create a function 
+ * Step 2 - Check if it's not a valid string
+ * Step 2.1 - Return , Please enter a valid word or character
+ * Step 3 - Check if the string length > 1
+ * Step 3.1 - Return , Please enter a valid character
+ * Step 4 - Lower case the following string -> AnKiT - ankit
+ * Step 5 - Iterate a loop & reverse the string
+ * Step 6 - Return the output
+ */
+
+steps 
+1. get a question.
+2. understand the question
+3. cross check with the interviewer 
+	- ask input 
+	- know edge cases (security check)
+	- ask for output
+4. break it into modules
+5. write algo 
+6. dry run
+7. run code
