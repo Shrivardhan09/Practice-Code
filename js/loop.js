@@ -24,12 +24,12 @@ function pattern1() {
 }
 
 // 1 2 4 8 16 32 64 128
-function pattern2() {
+function pattern2(num) {
   console.log("pattern 2");
   let j = 1;
-  for (let i = 1; i <= 8; i++) {
+  for (let i = 1; i <= num; i++) {
     console.log(j);
-    j = j * 2;
+    j *= 2;
   }
 }
 
@@ -73,11 +73,20 @@ function pattern7() {
     }
   }
 }
-
+//3 9 81 ....
+function pattern8() {
+  console.log("pattern 8");
+  let j = 1;
+  for (let i = 0; i < 10; i++) {
+    console.log(j);
+    j *= 3;
+  }
+}
 pattern1();
-pattern2();
+pattern2(8);
 pattern3();
 pattern4();
 pattern5();
 pattern6();
 pattern7();
+pattern8();
