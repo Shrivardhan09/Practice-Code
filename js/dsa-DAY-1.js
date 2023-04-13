@@ -6,6 +6,18 @@
  * step2.1  - create a loop of j which works in x direction  printing '*' which is connected to i loop
  * step3    - iterate the loop and call the function
  */
+
+// *
+// **
+// ***
+// ****
+// *****
+// ******
+// *******
+// ********
+// *********
+// **********
+
 const starPattern = (n) => {
   if (typeof n !== 'number' || n <= 0 || null) {
     console.log('Enter Positive Numbers');
@@ -29,6 +41,17 @@ starPattern(10);
  * step2.1  - create a loop which works opposite to y-direction i.e x-direction
  * step3    - iterate the loop and call the function.
  */
+// **********
+// *********
+// ********
+// *******
+// ******
+// *****
+// ****
+// ***
+// **
+// *
+
 const reverseStarPattern = (n) => {
   if (typeof n !== 'number' || n <= 0) {
     console.log('Enter Positive Numbers');
@@ -52,6 +75,11 @@ reverseStarPattern(10);
  * step2.1  - create a loop works in row -j
  * step3    - iterate the loop
  */
+// *****
+// *****
+// *****
+// *****
+// *****
 const printStars = (n) => {
   if (typeof n !== 'number' || n <= 0) {
     console.log('Enter Positive Numbers');
@@ -77,6 +105,13 @@ printStars(5);
  * step2.1  - create a loop that works in row -j
  * step 3   - iterate and call the function.
  */
+// 1111111
+// 222222
+// 33333
+// 4444
+// 555
+// 66
+// 7
 
 const numberPattern = (n) => {
   if (typeof n !== 'number' || n <= 0) {
@@ -87,7 +122,6 @@ const numberPattern = (n) => {
       for (let j = i; j <= n; j++) {
         num += i;
       }
-      num += '\n';
       console.log(num);
     }
   }
@@ -102,6 +136,13 @@ numberPattern(7);
  * step2    - iterate a loop in column
  * step2.1  - iterate a loop in row-j works in favour of i
  * step3    - iterate the loop and call the function
+// 1234567
+// 234567
+// 34567
+// 4567
+// 567
+// 67
+// 7
  */
 
 const revNumberPattern = (n) => {
@@ -119,3 +160,4 @@ const revNumberPattern = (n) => {
   }
 };
 revNumberPattern(7);
+
