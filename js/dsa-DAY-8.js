@@ -38,7 +38,7 @@ const arr = (tp, y) => {
                 // console.log(c)
                 let sum = a + b + c
                 // console.log(sum)
-                if (sum === x) {
+                if (sum === y) {
                     return [tp[i], tp[j], tp[k]]
                 }
             }
