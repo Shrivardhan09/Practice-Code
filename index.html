@@ -8,22 +8,18 @@
   </head>
   <body>
     <div>
-      <input
-        type="text"
-        id="search"
-        placeholder="Search here"
-        onkeyup="onSearch(event)"
-      />
+      <input type="text" id="search" placeholder="Search here" onkeyup="onSearch(event)" />
     </div>
   </body>
 </html>
 
-<script>
-  const searchElem = document.getElementById("search");
-  searchElem.value = localStorage.getItem("search");
+<!-- <script>
+  const searchElem = document.getElementById('search');
+  searchElem.value = localStorage.getItem('search');
 
   function onSearch(e) {
     console.log(e.target.value);
-    localStorage.setItem("search", e.target.value);
-  }
+    localStorage.setItem('search', e.target.value);
+  } -->
 </script>
+<script src="/js/dsa-DAY-8.js"></script>
