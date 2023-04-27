@@ -19,14 +19,14 @@ let tArr = (n, x) => {
     }
     return []
 }
-console.log(tArr([2, 3, 4, 5, 7, 9], 6))
+console.log(tArr([2, 3, 4, 5, 7, 9], 6)) // number array and x value.
 
 /**
  * @description{find first three numbers from number array whose sum is equals to x}
  */
 
-let x = 6
-const arr = (tp) => {
+// let x = 6
+const arr = (tp, y) => {
     for (let i = 0; i < tp.length; i++) {
         let a = tp[i]
         // console.log(a)
@@ -46,4 +46,4 @@ const arr = (tp) => {
     }
     return []
 }
-console.log(arr([2, 1, 4, 3, 2, 4, 5, 6, 7]))
+console.log(arr([2, 1, 4, 3, 2, 4, 5, 6, 7], 7)) // number array and y
