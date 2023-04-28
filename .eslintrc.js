@@ -15,5 +15,6 @@ module.exports = {
     'no-plusplus': ['error', { allowForLoopAfterthoughts: true }],
     'import/extensions': [0, { js: 'always' }],
     'linebreak-style': 0,
+    'no-labels': ['error', { allowLoop: false, allowSwitch: false }],
   },
 };

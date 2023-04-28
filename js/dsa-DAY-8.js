@@ -1,3 +1,4 @@
+/* eslint-disable no-prototype-builtins */
 /**
  * @description{find first pair from num arr whose sum is equals to x }
  */
@@ -47,3 +48,24 @@ const arr = (tp, y) => {
     return []
 }
 console.log(arr([2, 1, 4, 3, 2, 4, 5, 6, 7], 7)) // number array and y
+
+
+/**
+ * @description{alternative method of solving the ds thorugh 'object'}
+ */
+
+const objSumOfX = (arr, x) => {
+    let sArr = []
+    let sObj = {}
+    for (let i = 0; i < arr.length; i++) {
+        let sumPair = x - arr[i]
+        console.log(sumPair)
+        if (sObj.hasOwnProperty(sumPair)) {
+            sArr.push([arr[i], sumPair])
+        }
+        sObj[arr[i]] = i
+    }
+    console.log(sObj)
+    console.log(sArr)
+}
+console.log(objSumOfX([1, 2, 3, 4, 5, 6, 5, 4, 3, 1], 8))
