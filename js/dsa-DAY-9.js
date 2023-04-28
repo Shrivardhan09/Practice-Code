@@ -15,20 +15,18 @@ const findUnion = (arr1, arr2) => {
     for (let i = 0; i < arr1.length; i++) {
         if (!bObj.hasOwnProperty(arr1[i])) {
             //if there is no value present in the empty object then push array values into empty object
-            bObj[arr1[i]] = i
+            bObj[arr1[i]] = arr1[i]
         }
-        console.log(bObj[arr1[i]])
-        // console.log(bObj)
     }
 
     for (let j = 0; j < arr2.length; j++) {
         if (!bObj.hasOwnProperty(arr2[j])) {
             //if there is similar number is presnt in bObj then it wont print otherwise it would take remining values
-            bObj[arr2[j]] = j
+            bObj[arr2[j]] = arr2[j]
+            //syntax is obj[item] = index - way of storing in a object.
         }
-        console.log(bObj[arr2[j]] = j)
-        // console.log(bObj)
+
     }
-    return bObj;
+    return Object.values(bObj)
 }
 console.log(findUnion([12, 1, 2, 1, 3, 4, 2, 3, 4, 5, 6, 7, 8, 9, 1, 23], [23, 34, 3, 4, 3, 2, 5, 6, 7, 8, 9, 10, 11])) 
