@@ -1,3 +1,4 @@
+/* eslint-disable no-prototype-builtins */
 /**
  * -  To find a first three elements from a number array whose sum is X
  *   X = 6
