@@ -11,6 +11,7 @@
       <input type="text" id="search" placeholder="Search here" onkeyup="onSearch(event)" />
     </div>
   </body>
+  <style></style>
 </html>
 
 <!-- <script>
@@ -21,5 +22,26 @@
     console.log(e.target.value);
     localStorage.setItem('search', e.target.value);
   } -->
+<!-- </script> -->
+<!-- <script src="/js/dsa-DAY-13.js"></script> -->
+<script>
+  const pivotIndex = (nums) => {
+    let leftHalf = 0;
+    let totalSum = 0;
+    for (let i = 0; i < nums.length; i++) {
+      totalSum += nums[i];
+    }
+    console.log(totalSum); //28
+    for (let i = 0; i < nums.length; i++) {
+      if (leftHalf === totalSum - leftHalf - nums[i]) {
+        return i;
+      } else {
+        leftHalf += nums[i];
+      }
+    }
+  };
+
+  console.log(pivotIndex([1, 7, 3, 6, 5, 6]));
 </script>
-<script src="/js/dsa-DAY-8.js"></script>
+//i =0 ; 0 === 28 - 0 - 1 = 25 //i=1 ; 8 === 28 - 8 - 7 = 13 //i=2 ; 11 === 28 - 11 - 3 = 14 //i=3; 17 === 28 - 17 - 6 =
+5 //i =4 ; 22 === 28 - 22 - 5 =1 //i=5 ; 28 === 28 - 28 - 6 = -6
