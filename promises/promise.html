@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  const users = [
+    {
+      id: 1,
+      name: 'Vishal',
+      city: 'Bihar',
+    },
+    {
+      id: 2,
+      name: 'Ankit',
+      city: 'Morena',
+    },
+    {
+      id: 3,
+      name: 'Ritesh',
+      city: 'Bhopal',
+    },
+  ];
+
+  const orders1 = [
+    {
+      id: 1,
+      userId: 1,
+      name: 'Apple iPhone 14 Pro Max',
+    },
+    {
+      id: 2,
+      userId: 2,
+      name: 'Apple iPhone 13 Pro Max',
+    },
+    {
+      id: 3,
+      userId: 2,
+      name: 'Apple iPhone 12 Pro Max',
+    },
+    {
+      id: 4,
+      userId: 2,
+      name: 'Apple iPhone 11 Pro Max',
+    },
+  ];
+
+  const results = [
+    {
+      id: 1,
+      name: 'Vishal',
+      orders: [
+        {
+          productId: 1,
+          productName: 'Apple iPhone 14 Pro Max',
+        },
+      ],
+    },
+    {
+      id: 2,
+      name: 'Ankit',
+      orders: [
+        {
+          productId: 2,
+          productName: 'Apple iPhone 13 Pro Max',
+        },
+        {
+          productId: 3,
+          productName: 'Apple iPhone 12 Pro Max',
+        },
+        {
+          productId: 4,
+          productName: 'Apple iPhone 11 Pro Max',
+        },
+      ],
+    },
+    {
+      id: 3,
+      name: 'Ritesh',
+      orders: [],
+    },
+  ];
+
+  const cartBox = users.map((user) => {
+    const orderBox = orders1.filter((order) => user.id === order.id);
+
+    if (orderBox) {
+      return orderBox.map((ordersCart) => {
+        return {
+          personId: ordersCart.id,
+          personName: ordersCart.userId,
+          personOrder: ordersCart.name,
+        };
+      });
+    }
+  });
+  console.log(cartBox);
+</script>
+
+<script>
+  const profile = [
+    {
+      id: 1,
+      name: 'Ashwini',
+    },
+    {
+      id: 10,
+      name: 'Vishal',
+    },
+  ];
+
+  const orders = [
+    {
+      userId: 1,
+      productId: 101,
+      productName: 'Samsung Galaxy s2',
+    },
+    {
+      userId: 1,
+      productId: 102,
+      productName: 'Samsung Galaxy Watch',
+    },
+    {
+      userId: 10,
+      productId: 103,
+      productName: 'Samsung LED TV',
+    },
+  ];
+  // Output Result
+
+  const finalDetails = [
+    {
+      userId: 1,
+      name: 'Ashwini',
+      orders: [
+        {
+          productId: 101,
+          productName: 'Samsung Galaxy s2',
+        },
+        {
+          productId: 102,
+          productName: 'Samsung Galaxy Watch',
+        },
+      ],
+    },
+    {
+      userId: 10,
+      name: 'Vishal',
+      orders: [
+        {
+          productId: 103,
+          productName: 'Samsung LED TV',
+        },
+      ],
+    },
+  ];
+
+  const cart = profile.map((userCart) => {
+    const matchingId = orders.filter((matchId) => userCart.id === matchId.userId);
+
+    if (matchingId)
+      return matchingId.map((ordersCart) => {
+        return {
+          personId: ordersCart.userId,
+          personName: userCart.name,
+          personorders: {
+            productId: ordersCart.productId,
+            productName: ordersCart.productName,
+          },
+        };
+      });
+  });
+  console.log(cart);
+</script>

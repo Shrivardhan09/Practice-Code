@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  //Example of nested function
+  let names = {
+    name: 'vardhan',
+  };
+
+  function myFun1() {
+    console.log('myfun1 ' + this.name);
+    function myFun2() {
+      console.log('myfun2 ' + this.name);
+
+      let myFuncArrow = () => {
+        console.log('This is the arrow function ' + this.name);
+      };
+      myFuncArrow();
+    }
+    myFun2();
+    console.log(myFun2.call(names));
+  }
+  myFun1();
+  console.log(myFun1.call(names));
+</script>

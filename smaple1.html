@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<!-- <html>
+<head>
+  <title>Event Propagation Example</title>
+</head>
+<body>
+  <div id="outer" style="padding: 20px; background-color: lightgray;">
+    <div id="inner" style="padding: 20px; background-color: gray;">
+      <button id="button" style="padding: 10px;">Click Me</button>
+    </div>
+  </div>
+
+  <script>
+    var outer = document.getElementById("outer");
+    var inner = document.getElementById("inner");
+    var button = document.getElementById("button");
+
+    // Event capturing phase
+    outer.addEventListener("click", function() {
+      console.log("Outer Element (Capturing)");
+    }, true);
+
+    inner.addEventListener("click", function() {
+      console.log("Inner Element (Capturing)");
+    }, true);
+
+    button.addEventListener("click", function() {
+      console.log("Button Element (Capturing)");
+    }, true);
+
+    // Event bubbling phase
+    outer.addEventListener("click", function() {
+      console.log("Outer Element (Bubbling)");
+    }, false);
+
+    inner.addEventListener("click", function() {
+      console.log("Inner Element (Bubbling)");
+    }, false);
+
+    button.addEventListener("click", function() {
+      console.log("Button Element (Bubbling)");
+    }, false);
+  </script>
+</body>
+</html> -->
+
+<html>
+  <head>
+    <title>Event Propagation Example with stopPropagation()</title>
+  </head>
+  <body>
+    <div id="outer" style="padding: 20px; background-color: lightgray">
+      <div id="inner" style="padding: 20px; background-color: gray">
+        <button id="button" style="padding: 10px">Click Me</button>
+      </div>
+    </div>
+
+    <script>
+      var outer = document.getElementById('outer');
+      var inner = document.getElementById('inner');
+      var button = document.getElementById('button');
+
+      // Event capturing phase
+      outer.addEventListener(
+        'click',
+        function (event) {
+          console.log('Outer Element (Capturing)');
+          // event.stopPropagation();
+        },
+        true
+      );
+
+      inner.addEventListener(
+        'click',
+        function (event) {
+          console.log('Inner Element (Capturing)');
+          // event.stopPropagation();
+        },
+        true
+      );
+
+      button.addEventListener(
+        'click',
+        function (event) {
+          console.log('Button Element (Capturing)');
+          // event.stopPropagation();
+        },
+        true
+      );
+
+      // Event bubbling phase
+      outer.addEventListener('click', function () {
+        console.log('Outer Element (Bubbling)');
+      });
+
+      inner.addEventListener('click', function () {
+        console.log('Inner Element (Bubbling)');
+      });
+
+      button.addEventListener('click', function () {
+        console.log('Button Element (Bubbling)');
+      });
+    </script>
+  </body>
+</html>
+<!-- <script>
+  const promise = new Promise((resolve, reject) => {
+    console.log(1 + 'first');
+    setTimeout(() => {
+      console.log('timerStart inside setTimeout');
+      resolve('success');
+      console.log('timerEnd setTimeOut');
+    }, 0);
+    console.log(2 + 'two');
+  });
+
+  promise.then((res) => {
+    console.log(res);
+  });
+
+  console.log(4) + 'four';
+</script> -->

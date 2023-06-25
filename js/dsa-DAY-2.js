@@ -19,7 +19,7 @@ const treeStarPattern = (n) => {
         triangle += ' ';
       }
       for (let k = 1; k <= 2 * i - 1; k++) {
-        triangle += '*';
+        triangle += '^';
       }
       result += triangle + '\n';
     }
