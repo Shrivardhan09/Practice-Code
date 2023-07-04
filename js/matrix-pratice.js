@@ -85,5 +85,4 @@ for (let i = 0; i < input.length; i++) {
   console.log('__', firstColElems);
   resultsV2 = resultsV2.concat(firstColElems);
 }
-
 console.log({ resultsV2 });
